@@ -1,11 +1,11 @@
 NAME = so_long
 
-MY_SOURCES = start.c read.c
+MY_SOURCES = start.c read.c image_map.c
 
 MY_OBJECTS =  $(MY_SOURCES:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fPIE #-g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -fPIE  -g3 -fsanitize=address
 MLXFLAGS = -lX11 -lXext -lm
 $(NAME): $(MY_OBJECTS)
 	@${MAKE} -C ./libft

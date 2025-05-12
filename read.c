@@ -15,12 +15,6 @@ int counter_lines(char *av)
 		byte = read(fd, character, 1);
 		if (character[0] == '\n')
 			line ++;
-
-
-
-
-
-		
 	}
 	close(fd);
 	printf("%d\n", line);
@@ -56,12 +50,18 @@ char	**sl_read(char **av)
 	int		lines;
 
 	i = 0;
-	lines = counter_lines(av[1]);
+	lines = counter_lines(av[1]) + 1;
 	map = (char **)malloc(sizeof(char *) * (lines + 1));
+	if (!map)
+		return (NULL);
 	fd = open(av[1], O_RDONLY);
+	if (fd == -1)
+		return (free(map), NULL);
 	while (lines > 0)
 	{
 		map[i] = get_next_line(fd);
+		if (map[i] == NULL)
+			break ;
 		i++;
 		lines--;
 	}
