@@ -20,8 +20,8 @@ void	put_floor(char **map, t_data *img)
 			else
 			{
 				img = ft_new_sprite(img, "./pixels/mar.xpm");
-				mlx_put_image_to_window(img->mlx, img->mlx_win,
-						 img->img, x * 64, y * 64);
+				mlx_put_image_to_window(img->mlx, img->mlx_win, 
+						img->img, x * 64, y * 64);
 			}
 			x++;
 		}
@@ -90,7 +90,7 @@ void	put_mew(char **map, t_data *img)
 		{
 			if (map[y][x] == 'P')
 			{
-				img = ft_new_sprite(img, "./pixels/meww.xpm");
+				img = ft_new_sprite(img, "./pixels/mew.xpm");
 				img->x_pos = x;
 				img->y_pos = y;
 				mlx_put_image_to_window(img->mlx, img->mlx_win,

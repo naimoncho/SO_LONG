@@ -34,5 +34,7 @@ void	put_collect(char **map, t_data *img);
 void	put_exit(char **map, t_data *img);
 void	put_mew(char **map, t_data *img);
 void	put_map(t_data *img);
+void	close_w(t_data *img);
+int		close_wind(t_data *img);
 
 #endif

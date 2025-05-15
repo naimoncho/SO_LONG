@@ -20,8 +20,8 @@ int	main(int ac, char **av)
 
 	counter_lines(av[1]);
 	bytes(av[1]);
-	img = malloc(sizeof(t_data));
 	map = sl_read(av);
+	img = (t_data *)malloc(sizeof(t_data));
 	if (map != NULL)
 	{
 		while (map[i])
@@ -40,6 +40,9 @@ int	main(int ac, char **av)
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, &img->line_length,
 								&img->endian);
 	mlx_put_image_to_window(img->mlx, img->mlx_win, img->img, 64, 64);
+	img->map = map;
 	put_map(img);
+	mlx_hook(img->mlx_win, 17, 0, close_wind, img);
+	// mlx_key_hook(img->mlx_win, move, img);
 	mlx_loop(img->mlx);
 }
