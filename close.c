@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void	close_w(t_data *img)
+void	free_game(t_data *img)
 {
 	mlx_destroy_window(img->mlx, img->mlx_win);
 	free(img->map);
@@ -11,6 +11,6 @@ void	close_w(t_data *img)
 int	close_wind(t_data *img)
 {
 	ft_printf("termine\n");
-	close_w(img);
+	free_game(img);
 	return (0);
 }

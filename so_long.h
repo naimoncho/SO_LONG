@@ -21,7 +21,9 @@ typedef struct	s_data {
     int     collectible;
     int     x_pos;
     int     y_pos;
+	int		steps;
 	char	**map;
+
 }				t_data;
 
 int     counter_lines(char *av);
@@ -34,7 +36,9 @@ void	put_collect(char **map, t_data *img);
 void	put_exit(char **map, t_data *img);
 void	put_mew(char **map, t_data *img);
 void	put_map(t_data *img);
-void	close_w(t_data *img);
+void	free_game(t_data *img);
 int		close_wind(t_data *img);
+void	check_player(char **map, int p);
+void	check_valid_moves(t_data *img);
 
 #endif

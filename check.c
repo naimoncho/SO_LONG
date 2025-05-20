@@ -28,8 +28,19 @@ void	check_player(char **map, int p)
 void	check_valid_moves(t_data *img)
 {
 	if (img->map[img->y_pos][img->x_pos] == 'C')
-	img = ft_new_sprite(img, "./pixels/mar.xpm");
-	mlx_put_image_to_window(img->mlx, img->mlx_win, 
-			img->img, img->x_pos * 64, img->y_pos * 64);
-	
+	{
+		img = ft_new_sprite(img, "./pixels/mar.xpm");
+		mlx_put_image_to_window(img->mlx, img->mlx_win, 
+				img->img, img->x_pos * 64, img->y_pos * 64);
+		img->objects -= 1;
+		img->map[img->y_pos][img->x_pos] = '0';
+	}
+	if (img->map[img->y_pos][img->x_pos] == 'E' && img->objects == 0)
+	{
+		ft_printf("\nSteps = %i\n", img->steps += 1);
+		ft_printf("Victory\n");
+		free_game(img);
+	}
+	if (img->objects == 0)
+		put_exit(img->map, img);
 }
