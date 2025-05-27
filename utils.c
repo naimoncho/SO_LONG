@@ -36,5 +36,4 @@ void fill(char **tmap, int y, int x, char target)
 	fill(tmap, target, y + 1, x);
 	fill(tmap, target, y, x - 1);
 	fill(tmap, target, y, x + 1);
-	
 }

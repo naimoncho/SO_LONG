@@ -2,8 +2,9 @@
 
 void	free_game(t_data *img)
 {
+	mlx_clear_window(img->mlx, img->mlx_win);
 	mlx_destroy_window(img->mlx, img->mlx_win);
-	free(img->map);
+	ft_free_all(img->map);
 	free(img);
 	exit(EXIT_SUCCESS);
 }

@@ -1,22 +1,5 @@
 #include "so_long.h"
 
-int		moves(int key, t_data *img)
-{
-	if (key == 119)
-		move_up(img);
-	if (key == 97)
-		move_left(img);
-	if (key == 115)
-		move_down(img);
-	if (key == 100)
-		move_right(img);
-	if (key == 65307)
-	{
-		ft_printf("GAME OVER\n");
-		free_game(img);
-	}
-	return (0);
-}
 
 void	move_right(t_data *img)
 {
@@ -88,4 +71,22 @@ void	move_down(t_data *img)
 				img->img, img->x_pos * 64, (img->y_pos - 1) * 64);
 	}
 	ft_printf("\nSteps: %i\n", img->steps += 1);
+}
+
+int		moves(int key, t_data *img)
+{
+	if (key == 119)
+		move_up(img);
+	if (key == 97)
+		move_left(img);
+	if (key == 115)
+		move_down(img);
+	if (key == 100)
+		move_right(img);
+	if (key == 65307)
+	{
+		ft_printf("GAME OVER\n");
+		free_game(img);
+	}
+	return (0);
 }

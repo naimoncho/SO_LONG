@@ -47,4 +47,7 @@ int	main(int ac, char **av)
 	mlx_hook(img->mlx_win, 17, 0, close_wind, img);
 	mlx_key_hook(img->mlx_win, moves, img);
 	mlx_loop(img->mlx);
+	ft_free_all(map);
+	free(img);
+	return 0;
 }
