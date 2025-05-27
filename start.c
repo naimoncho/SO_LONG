@@ -35,7 +35,9 @@ int	main(int ac, char **av)
 		}
 	}
 	img->mlx = mlx_init();
-	img->mlx_win = mlx_new_window(img->mlx, 1920, 1080, "Hello world!");
+	img->y_size = count_lines_fd(map) * 64;
+	img->x_size = bytes_fd(map[0]) * 64;
+	img->mlx_win = mlx_new_window(img->mlx, img->x_size, img->y_size, "So_long");
 	img->img = mlx_new_image(img->mlx, 1920, 1080);
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, &img->line_length,
 								&img->endian);
@@ -43,6 +45,6 @@ int	main(int ac, char **av)
 	img->map = map;
 	put_map(img);
 	mlx_hook(img->mlx_win, 17, 0, close_wind, img);
-	// mlx_key_hook(img->mlx_win, move, img);
+	mlx_key_hook(img->mlx_win, moves, img);
 	mlx_loop(img->mlx);
 }

@@ -28,6 +28,8 @@ typedef struct	s_data {
 
 int     counter_lines(char *av);
 int	    bytes(char *av);
+int		count_lines_fd(char **map);
+int		bytes_fd(char *map);
 char	**sl_read(char **av);
 void	put_floor(char **map, t_data *img);
 t_data	*ft_new_sprite(t_data *img, char *path);
@@ -38,7 +40,12 @@ void	put_mew(char **map, t_data *img);
 void	put_map(t_data *img);
 void	free_game(t_data *img);
 int		close_wind(t_data *img);
-void	check_player(char **map, int p);
+int		check_player(char **map, int p);
 void	check_valid_moves(t_data *img);
+int		moves(int key, t_data *img);
+void	move_right(t_data *img);
+void	move_up(t_data *img);
+void	move_up(t_data *img);
+void	move_down(t_data *img);
 
 #endif

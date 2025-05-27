@@ -12,13 +12,13 @@ int	bytes_fd(char *map)
 int	count_lines_fd(char **map)
 {
 	int	y;
-	int	y;
+	int	x;
 
 	y = 0;
 	while (map[y])
 	{
-		y = 0;
-		while(map[y][y] != '\0' && map[y][y] != '\n')
+		x = 0;
+		while(map[y][x] != '\0' && map[y][x] != '\n')
 			x++;
 		y++;
 	}
@@ -31,11 +31,10 @@ void fill(char **tmap, int y, int x, char target)
 		return ;
 	if (tmap[y][x] == 'F' || tmap[y][x] == target)
 		return ;
-	{
-		tmap[y][x] = 'F';
-		fill(tmap, target, y - 1, x);
-		fill(tmap, target, y + 1, x);
-		fill(tmap, target, y, x - 1);
-		fill(tmap, target, y, x + 1);
-	}
+	tmap[y][x] = 'F';
+	fill(tmap, target, y - 1, x);
+	fill(tmap, target, y + 1, x);
+	fill(tmap, target, y, x - 1);
+	fill(tmap, target, y, x + 1);
+	
 }
