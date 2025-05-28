@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:35:40 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 16:31:35 by naimcheniou      ###   ########.fr       */
+/*   Updated: 2025/05/28 19:24:20 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

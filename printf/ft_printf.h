@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:36:14 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/02/05 20:04:18 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 18:54:10 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdarg.h>
 # include <limits.h>
 
-size_t	ft_strlen(const char *str);
+size_t	ft_printstrlen(const char *str);
 void	ft_putnbr(int n, int *len);
 void	ft_putnbr_base(unsigned long num, char *base, int *len);
 void	ft_putptr(unsigned long n, char *base, int *len);

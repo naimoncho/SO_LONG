@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:51:12 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 16:44:27 by naimcheniou      ###   ########.fr       */
+/*   Updated: 2025/05/28 19:45:42 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ t_data	*ft_new_sprite(t_data *img, char *path)
 char	**change_map(char **av)
 {
 	char	**map;
-	
+
 	map = sl_read(av);
-	return(map);
+	return (map);
 }
 
 int	parse_map(char **map, char **av)
@@ -45,4 +45,16 @@ int	parse_map(char **map, char **av)
 	}
 	ft_free_all(map_fill);
 	return (1);
+}
+
+int	check_extension_av(char *s)
+{
+	char	*ext;
+	int		i;
+
+	i = ft_strlen(s) - 4;
+	ext = ft_substr(ext, i, 4);
+	if (ft_strnstr(ext, ".ber", 1))
+		return (free(ext), 1);
+	return (free(ext), 0);
 }

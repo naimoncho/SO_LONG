@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:37 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 16:25:14 by naimcheniou      ###   ########.fr       */
+/*   Updated: 2025/05/28 19:46:20 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	counter_lines(char *av)
 			line ++;
 	}
 	close(fd);
-	printf("%d\n", line);
 	return (line - 1);
 }
 
@@ -50,7 +49,6 @@ int	bytes(char *av)
 			byte ++;
 	}
 	close(fd);
-	printf("%d\n", byte);
 	return (byte);
 }
 
@@ -81,4 +79,3 @@ char	**sl_read(char **av)
 	close(fd);
 	return (map);
 }
-

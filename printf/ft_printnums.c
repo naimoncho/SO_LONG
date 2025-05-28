@@ -6,13 +6,13 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:36:09 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/02/05 20:21:18 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 18:54:44 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_printstrlen(const char *str)
 {
 	size_t	aux;
 
@@ -47,7 +47,7 @@ void	ft_putnbr_base(unsigned long num, char *base, int *len)
 	unsigned int	i;
 	unsigned int	length;
 
-	length = ft_strlen(base);
+	length = ft_printstrlen(base);
 	i = num;
 	if (i >= length)
 	{

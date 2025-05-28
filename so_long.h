@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:43:48 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 16:42:02 by naimcheniou      ###   ########.fr       */
+/*   Updated: 2025/05/28 18:42:31 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int		check_wall(char **map);
 int		check_collectible(int x, int y, char **map);
 int		check_exit(int x, int y, char **map);
 int		check_fill(char **fill_map);
+int		check_extension_av(char *s);
 char	**change_map(char **av);
 int		parse_map(char **map, char **av);
 
