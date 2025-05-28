@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/28 12:02:37 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/05/28 13:33:32 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-int counter_lines(char *av)
+int	counter_lines(char *av)
 {
-	int 	fd;
+	int		fd;
 	int		line;
 	int		byte;
 	char	character[1];
 
-	fd  = open(av, O_RDONLY);
+	fd = open(av, O_RDONLY);
 	line = 1;
 	byte = 1;
 	while (byte != 0)
@@ -23,7 +35,7 @@ int counter_lines(char *av)
 
 int	bytes(char *av)
 {
-	int 	fd;
+	int		fd;
 	int		byte_read;
 	int		byte;
 	char	character[1];
@@ -67,5 +79,5 @@ char	**sl_read(char **av)
 	}
 	map[i] = NULL;
 	close(fd);
-	return(map);
+	return (map);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/28 13:43:48 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/05/28 13:43:49 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -8,7 +20,8 @@
 # include <stdarg.h>
 # include <limits.h>
 
-typedef struct	s_data {
+typedef struct s_data
+{
 	void	*img;
 	char	*addr;
 	void	*mlx;
@@ -18,16 +31,15 @@ typedef struct	s_data {
 	int		endian;
 	int		x_size;
 	int		y_size;
-    int     collectible;
-    int     x_pos;
-    int     y_pos;
+	int		collectible;
+	int		x_pos;
+	int		y_pos;
 	int		steps;
 	char	**map;
-
 }				t_data;
 
-int     counter_lines(char *av);
-int	    bytes(char *av);
+int		counter_lines(char *av);
+int		bytes(char *av);
 int		count_lines_fd(char **map);
 int		bytes_fd(char *map);
 char	**sl_read(char **av);
@@ -47,5 +59,6 @@ void	move_right(t_data *img);
 void	move_up(t_data *img);
 void	move_up(t_data *img);
 void	move_down(t_data *img);
+void	fill(char **tmap, char target, int y, int x);
 
 #endif

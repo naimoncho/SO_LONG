@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   image_map.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/28 12:00:21 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/05/28 12:00:22 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 void	put_floor(char **map, t_data *img)
@@ -15,13 +27,13 @@ void	put_floor(char **map, t_data *img)
 			{
 				img = ft_new_sprite(img, "./pixels/roca1.xpm");
 				mlx_put_image_to_window(img->mlx, img->mlx_win,
-						 img->img, x * 64, y * 64);
+					img->img, x * 64, y * 64);
 			}
 			else
 			{
 				img = ft_new_sprite(img, "./pixels/mar.xpm");
-				mlx_put_image_to_window(img->mlx, img->mlx_win, 
-						img->img, x * 64, y * 64);
+				mlx_put_image_to_window(img->mlx, img->mlx_win,
+					img->img, x * 64, y * 64);
 			}
 			x++;
 		}
@@ -46,7 +58,7 @@ void	put_collect(char **map, t_data *img)
 				img = ft_new_sprite(img, "./pixels/heal_ball.xpm");
 				img->collectible += 1;
 				mlx_put_image_to_window(img->mlx, img->mlx_win,
-						 img->img, x * 64, y * 64);
+					img->img, x * 64, y * 64);
 			}
 			x++;
 		}
@@ -56,8 +68,8 @@ void	put_collect(char **map, t_data *img)
 
 void	put_exit(char **map, t_data *img)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	y = 0;
 	while (map[y])
@@ -69,7 +81,7 @@ void	put_exit(char **map, t_data *img)
 			{
 				img = ft_new_sprite(img, "./pixels/exit.xpm");
 				mlx_put_image_to_window(img->mlx, img->mlx_win,
-						 img->img, x * 64, y * 64);
+					img->img, x * 64, y * 64);
 			}
 			x++;
 		}
@@ -79,8 +91,8 @@ void	put_exit(char **map, t_data *img)
 
 void	put_mew(char **map, t_data *img)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	y = 0;
 	while (map[y])
@@ -94,7 +106,7 @@ void	put_mew(char **map, t_data *img)
 				img->x_pos = x;
 				img->y_pos = y;
 				mlx_put_image_to_window(img->mlx, img->mlx_win,
-						 img->img, x * 64, y * 64);
+					img->img, x * 64, y * 64);
 			}
 			x++;
 		}

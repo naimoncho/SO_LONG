@@ -1,6 +1,6 @@
 NAME = so_long
 
-MY_SOURCES = start.c read.c image_map.c close.c utils.c move.c check.c
+MY_SOURCES = start.c read.c image_map.c close.c utils.c move.c check.c check_map.c  utils_map.c
 
 MY_OBJECTS =  $(MY_SOURCES:.c=.o)
 

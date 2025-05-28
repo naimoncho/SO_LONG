@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/28 11:57:58 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/05/28 11:57:59 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-int		check_player(char **map, int p)
+int	check_player(char **map, int p)
 {
 	int	x;
 	int	y;
@@ -9,7 +21,7 @@ int		check_player(char **map, int p)
 	while (y < count_lines_fd(map))
 	{
 		x = 0;
-		while(map[y][x] != '\0' && map[y][x] != '\n')
+		while (map[y][x] != '\0' && map[y][x] != '\n')
 		{
 			if (map[y][x] == 'P')
 			{
@@ -30,8 +42,8 @@ void	check_valid_moves(t_data *img)
 	if (img->map[img->y_pos][img->x_pos] == 'C')
 	{
 		img = ft_new_sprite(img, "./pixels/mar.xpm");
-		mlx_put_image_to_window(img->mlx, img->mlx_win, 
-				img->img, img->x_pos * 64, img->y_pos * 64);
+		mlx_put_image_to_window(img->mlx, img->mlx_win,
+			img->img, img->x_pos * 64, img->y_pos * 64);
 		img->collectible -= 1;
 		img->map[img->y_pos][img->x_pos] = '0';
 	}
