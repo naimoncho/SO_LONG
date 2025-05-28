@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:51:12 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 19:45:42 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 19:54:42 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ int	check_extension_av(char *s)
 	int		i;
 
 	i = ft_strlen(s) - 4;
-	ext = ft_substr(ext, i, 4);
-	if (ft_strnstr(ext, ".ber", 1))
+	ext = ft_substr(s, i, 4);
+	if (ft_strnstr(ext, ".ber", 4))
 		return (free(ext), 1);
 	return (free(ext), 0);
 }
