@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:37 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 13:33:32 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 16:25:14 by naimcheniou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,4 @@ char	**sl_read(char **av)
 	close(fd);
 	return (map);
 }
+

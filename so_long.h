@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:43:48 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 13:43:49 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 16:42:02 by naimcheniou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,39 @@ typedef struct s_data
 	char	**map;
 }				t_data;
 
+// CREATIONS OF SPRITE
+t_data	*ft_new_sprite(t_data *img, char *path);
+// MAP READ TOOLS
 int		counter_lines(char *av);
 int		bytes(char *av);
 int		count_lines_fd(char **map);
 int		bytes_fd(char *map);
 char	**sl_read(char **av);
+// PUT SPRITES ON MAP 
 void	put_floor(char **map, t_data *img);
-t_data	*ft_new_sprite(t_data *img, char *path);
 void	put_floor(char **map, t_data *img);
 void	put_collect(char **map, t_data *img);
 void	put_exit(char **map, t_data *img);
 void	put_mew(char **map, t_data *img);
 void	put_map(t_data *img);
+// PARSING KEY
 void	free_game(t_data *img);
 int		close_wind(t_data *img);
 int		check_player(char **map, int p);
 void	check_valid_moves(t_data *img);
+// MOVEMENTS
 int		moves(int key, t_data *img);
 void	move_right(t_data *img);
 void	move_up(t_data *img);
 void	move_up(t_data *img);
 void	move_down(t_data *img);
+// PARSING
 void	fill(char **tmap, char target, int y, int x);
+int		check_wall(char **map);
+int		check_collectible(int x, int y, char **map);
+int		check_exit(int x, int y, char **map);
+int		check_fill(char **fill_map);
+char	**change_map(char **av);
+int		parse_map(char **map, char **av);
 
 #endif

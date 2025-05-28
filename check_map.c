@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naimcheniounigomez <naimcheniounigomez@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:35:40 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 13:46:11 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/28 16:31:35 by naimcheniou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	check_wall(char **map)
 
 	y = 0;
 	lines = count_lines_fd(map);
-	byte = bytes_fd(nap[0]);
+	byte = bytes_fd(map[0]);
 	if ((lines - 1) < 2 || (byte - 1) < 2)
 		return (0);
 	while (map[y])
