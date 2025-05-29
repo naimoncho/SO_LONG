@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:37 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 19:46:20 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/29 13:56:20 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**sl_read(char **av)
 
 	i = 0;
 	lines = counter_lines(av[1]) + 1;
-	map = (char **)malloc(sizeof(char *) * (lines + 1));
+	map = (char **)ft_calloc(sizeof(char *), (lines + 1));
 	if (!map)
 		return (NULL);
 	fd = open(av[1], O_RDONLY);
@@ -75,7 +75,8 @@ char	**sl_read(char **av)
 		i++;
 		lines--;
 	}
-	map[i] = NULL;
-	close(fd);
-	return (map);
+	i--;
+	if (map[i] && map[i][ft_strlen(map[i]) - 1] == '\n')
+		return (ft_free_all(map), NULL);
+	return (close(fd), map);
 }

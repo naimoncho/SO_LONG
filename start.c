@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:08:40 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/28 19:55:30 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/05/29 14:08:06 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	main(int ac, char **av)
 	char	**map;
 	t_data	*img;
 
-	if (ac != 2 || ac == 2 && !check_extension_av(av[1]))
+	if (ac != 2 || !check_extension_av(av[1]))
 		return (ft_printf("Error\nNot compatible argument\n"), 1);
 	map = sl_read(av);
 	if (!map)
-		return (ft_free_all(map), ft_printf("Error\nNot compatible map\n"));
+		return (ft_printf("Error\nNot compatible map\n"), 1);
 	if (!parse_map(map, av))
 		return (ft_free_all(map), ft_printf("Error\nNot compatible map\n"));
 	img = (t_data *)malloc(sizeof(t_data));
