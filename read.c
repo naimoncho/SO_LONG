@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:37 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/06/03 10:34:02 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:11:13 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	**sl_read(char **av)
 	{
 		map[i] = get_next_line(fd);
 		if (map[i] == NULL)
-			break ;
+			return (ft_printf("Error\n"), exit(1), NULL);
 		i++;
 		lines--;
 	}

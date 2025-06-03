@@ -6,7 +6,7 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:35:40 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/29 13:00:44 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:18:55 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	check_collectible(int x, int y, char **map)
 		}
 		y++;
 	}
-	if (player != 1 || exit != 1 || collectible < 0)
+	if (player != 1 || exit != 1 || collectible <= 0)
 		return (0);
 	return (1);
 }

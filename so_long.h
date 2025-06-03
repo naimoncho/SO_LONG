@@ -6,15 +6,15 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:43:48 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/29 13:00:13 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/06/03 12:30:58 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "get_next_line/get_next_line.h"
-# include "printf/ft_printf.h"
+# include "libft/get_next_line/get_next_line.h"
+# include "libft/printf/ft_printf.h"
 # include "libft/libft.h"
 # include "minilibx-linux/mlx.h"
 # include <stdarg.h>
