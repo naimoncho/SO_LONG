@@ -4,8 +4,8 @@ MY_SOURCES = start.c read.c image_map.c close.c utils.c move.c check.c check_map
 
 MY_OBJECTS =  $(MY_SOURCES:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fPIE  -g3 -fsanitize=address
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -fPIE  -g3 #-fsanitize=address
 MLXFLAGS = -lX11 -lXext -lm
 $(NAME): $(MY_OBJECTS)
 	@${MAKE} -C ./libft

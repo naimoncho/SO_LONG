@@ -6,11 +6,23 @@
 /*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:08:40 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/05/29 14:08:06 by ncheniou         ###   ########.fr       */
+/*   Updated: 2025/06/03 10:54:10 by ncheniou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+static void	check_map_av(char **av)
+{
+	int	fd;
+
+	fd = open(av[1], O_RDONLY);
+	if (fd < 0)
+	{
+		ft_printf("Error\nNot compatible argument\n");
+		exit(1);
+	}
+}
 
 int	main(int ac, char **av)
 {
@@ -19,6 +31,7 @@ int	main(int ac, char **av)
 
 	if (ac != 2 || !check_extension_av(av[1]))
 		return (ft_printf("Error\nNot compatible argument\n"), 1);
+	check_map_av(av);
 	map = sl_read(av);
 	if (!map)
 		return (ft_printf("Error\nNot compatible map\n"), 1);
